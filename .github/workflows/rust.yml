@@ -3,7 +3,7 @@ name: Rust
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   pull_request:
     branches: [ "main", "dev" ]
 
@@ -19,5 +19,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Verify examples
       env:
-        EXAMPLES: basic-ownership
+        EXAMPLES: basic-ownership,struct-ownership
       run: for ex in $EXAMPLES; do cargo run --verbose --example $ex; done
