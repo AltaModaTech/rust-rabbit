@@ -1,4 +1,6 @@
 /*
+    AltaModa Technologies, LLC
+    
     struct-ownership example
  */
 
