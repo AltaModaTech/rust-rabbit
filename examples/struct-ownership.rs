@@ -1,6 +1,6 @@
 /*
     AltaModa Technologies, LLC
-    
+
     struct-ownership example
  */
 
@@ -33,6 +33,13 @@ fn main () {
     println!("\nThe variable `a` is type AllHeapElements");
     println!("`a` is on the stack; elements of AllHeapElements are on the heap");
     println!("a.desc = {}", a.desc);
+
+    // This code fails to compile because `a2` has taken ownership of
+    //  the struct reference from `a`. Rust refers to this as
+    //  ownership _moving_ from `a` to `a2`. Uncommenting these lines
+    //  see the "borrow after move" error on compilation.
+    // let a2 = a;
+    // println!("a.desc = {}", a.desc);
 
     println!();
 }
