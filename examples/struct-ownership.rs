@@ -1,3 +1,6 @@
+/*
+    struct-ownership example
+ */
 
 // This structure contains an 64-bit integer. The entire struct can be stored on the stack.
 struct NoHeapElements {
